@@ -13,7 +13,9 @@ function App() {
   return (
     <div>
       <header className="bg-black text-white items-center p-4 h-16 flex">
-        <div className="w-3/4 ml-8 text-xl"> Hello </div>
+        <div className="w-3/4 ml-8 text-xl">
+          <a href="/"> Hello </a>{" "}
+        </div>
         <div>
           <a href="/about">About</a>
           <a className="ml-4" href="/login">
