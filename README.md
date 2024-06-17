@@ -26,8 +26,8 @@
 
 -- This is very simple yet important feature to use in frontend to engage user as well improve the performance.
 -- Three key things to keep in mind for this feature.
--- #FF0000 1. document.body.scrollHeight = This will tell the total scrollable height of page.
--- #FF0000 2. window.innerHeight = This is the height of page visible to user.
--- #FF0000 3. window.scrollY = This is how much user have scrolled the page.
+-- '#FF0000' 1. document.body.scrollHeight = This will tell the total scrollable height of page.
+-- '#FF0000' 2. window.innerHeight = This is the height of page visible to user.
+-- '#FF0000' 3. window.scrollY = This is how much user have scrolled the page.
 -- Keeping this in mind we can easily implement infinite scroll. We will be fetching some data at initial load so, we will add an (scroll) eventListner and we just have to fetch some data again when we reach end of page.
 -- If (window.innerHeight + window.scrollY >= document.body.scrollHeight) then we will call the same fetch function and append newly fetched data with older one.
