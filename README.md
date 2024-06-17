@@ -31,3 +31,11 @@
 - 3. window.scrollY = This is how much user have scrolled the page.
 - Keeping this in mind we can easily implement infinite scroll. We will be fetching some data at initial load so, we will add an (scroll) eventListner and we just have to fetch some data again when we reach end of page.
 - If (window.innerHeight + window.scrollY >= document.body.scrollHeight) then we will call the same fetch function and append newly fetched data with older one.
+
+## Accordian
+
+- In accordian we learned very important concept of lifting state up.
+- What we did here is we have created Accordian component and we will loop over every data we are getting and calling AccordianItem component which will create each accordian.
+- One way to built accordian is by taking state variable isOpen in AccordianItem component and have conditional rendering to show accordian body based on isOpen state. In this way each accordian is independent of each other.
+- What if we want to close opened accordian when we click on any other accordian. In this case accrodians state can't be independent. So, where to declare state of each accordian. Yes, by lifing state up to its parent component (Accordian) we can achieve the desired result.
+- So, we will create state in parent component and pass it to each accordian while calling AccordianItem component. In this way we can control accordians and there behavior depends on other accordians.

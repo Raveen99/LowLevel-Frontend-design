@@ -32,7 +32,7 @@ const Body = () => {
       {memes.map((meme, i) => (
         <MemeCard key={i} data={meme} />
       ))}
-      {showShimmer ? <Shimmer /> : ""}
+      {showShimmer && <Shimmer />}
     </div>
   );
 };

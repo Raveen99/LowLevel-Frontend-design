@@ -6,6 +6,7 @@ import About from "./components/About";
 import Login from "./components/Login";
 import { Languages } from "./utils/constants";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Accordian from "./components/Accordian";
 
 function App() {
   const [selectedLang, setSelectedLang] = useState("en");
@@ -20,6 +21,9 @@ function App() {
           <a href="/about">About</a>
           <a className="ml-4" href="/login">
             Login
+          </a>
+          <a className="ml-4" href="/accordian">
+            Accordian
           </a>
 
           <select
@@ -46,6 +50,7 @@ function App() {
           </Route>
 
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/accordian" element={<Accordian />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
