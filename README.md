@@ -39,3 +39,8 @@
 - One way to built accordian is by taking state variable isOpen in AccordianItem component and have conditional rendering to show accordian body based on isOpen state. In this way each accordian is independent of each other.
 - What if we want to close opened accordian when we click on any other accordian. In this case accrodians state can't be independent. So, where to declare state of each accordian. Yes, by lifing state up to its parent component (Accordian) we can achieve the desired result.
 - So, we will create state in parent component and pass it to each accordian while calling AccordianItem component. In this way we can control accordians and there behavior depends on other accordians.
+
+## Redit Nested Comments
+
+- This is very simple yet important concept which uses recursion. How we divide problem into smaller problems and solve it.
+- code files comments.js and commentbox.js

@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import { Languages } from "./utils/constants";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Accordian from "./components/Accordian";
+import Comments from "./components/NestedComments/Comments";
 
 function App() {
   const [selectedLang, setSelectedLang] = useState("en");
@@ -19,15 +20,18 @@ function App() {
         </div>
         <div>
           <a href="/about">About</a>
-          <a className="ml-4" href="/login">
+          <a className="ml-6" href="/login">
             Login
           </a>
-          <a className="ml-4" href="/accordian">
+          <a className="ml-6" href="/accordian">
             Accordian
+          </a>
+          <a className="ml-6" href="/comments">
+            Comments
           </a>
 
           <select
-            className="ml-4 text-black h-6 w-24"
+            className="ml-6 text-black h-6 w-24"
             value={selectedLang}
             onChange={(e) => setSelectedLang(e.target.value)}
           >
@@ -51,6 +55,7 @@ function App() {
 
           <Route path="/login" element={<Login />}></Route>
           <Route path="/accordian" element={<Accordian />}></Route>
+          <Route path="/comments" element={<Comments />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
