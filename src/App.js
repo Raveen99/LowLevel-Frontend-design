@@ -8,6 +8,7 @@ import { Languages } from "./utils/constants";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Accordian from "./components/Accordian";
 import Comments from "./components/NestedComments/Comments";
+import ImageSlider from "./components/ImageSlider/ImageSlider";
 
 function App() {
   const [selectedLang, setSelectedLang] = useState("en");
@@ -15,7 +16,7 @@ function App() {
   return (
     <div>
       <header className="bg-black text-white items-center p-4 h-16 flex">
-        <div className="w-3/4 ml-8 text-xl">
+        <div className="w-2/4 ml-8 text-xl">
           <a href="/"> Hello </a>{" "}
         </div>
         <div>
@@ -28,6 +29,9 @@ function App() {
           </a>
           <a className="ml-6" href="/comments">
             Comments
+          </a>
+          <a className="ml-6" href="/slider">
+            Slider
           </a>
 
           <select
@@ -56,6 +60,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/accordian" element={<Accordian />}></Route>
           <Route path="/comments" element={<Comments />}></Route>
+          <Route path="slider" element={<ImageSlider />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

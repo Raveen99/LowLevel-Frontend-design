@@ -44,3 +44,10 @@
 
 - This is very simple yet important concept which uses recursion. How we divide problem into smaller problems and solve it.
 - code files comments.js and commentbox.js
+
+## Image Slider
+
+- A very simple concept yet again very important and can be asked in various manners.
+- First create simple slider
+- Make images autoSlide.
+- You can also make multiImage slider.
