@@ -47,7 +47,24 @@
 
 ## Image Slider
 
-- A very simple concept yet again very important and can be asked in various manners.
+- A very simple concept and can be asked in various manners.
 - First create simple slider
 - Make images autoSlide.
 - You can also make multiImage slider.
+
+## Pagination
+
+- Pagination is another very important concept in frontend Design.
+- There are different ways to do pagination: Frontend pagination, offset(backend) pagination, cursor pagination. There is also alternative to pagination which is infinite scroll.
+- Pagination or Infinite Scroll. What to use? It purely depends on use case of your web application. Like for e-commerce pagination is better option because it help in cataloging of items, but on other hand infine scroll is useful for web application where user come without any certain goal just for scrolling like social media. Infinite scrolling make user stick to web app whereas pagination helps user find product quickly.
+
+- Which is better ? Frontend pagination or Offset pagination. FrontEnd pagination gets all the data from one api call and at frontend we have to take care of splitting data in pages, but in offset pagination we call api and get data of next page we want to go. So, initial load time is less in offset pagination.
+
+- Now why we need cursor pagination when we have offset pagination. Suppose, as soon as user click on next page(let's say 2nd page) some new data comes in and appended at start of result and some data in 1st page shifted to 2nd page or some data is deleted from 1st page so some data from page 2 shifted to page 1. This create inconsistencty. To solve this issue we use cursor pagination.
+
+- Cursor Pagination works well with Real Time (dynamic) data eg: social media. Cursor pagination is faster than offset pagination. Why? Bcoz in cursor pagination we direct give the unique value from where we need the data whereas in offset pagination we have to give offset value based of which system will skip those offset value and from there it will send next entries. **Offset pagination is like Linked List where as cursor pagination is like array.**
+
+- Cons of cursor pagination:
+- 1. Doesn't keep track of pages
+- 2. If you want to sort data that can't be done in cursor pagination
+- 3. Little trickier to implement than offset pagination.

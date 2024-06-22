@@ -9,6 +9,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Accordian from "./components/Accordian";
 import Comments from "./components/NestedComments/Comments";
 import ImageSlider from "./components/ImageSlider/ImageSlider";
+import Pagination from "./components/Pagination/Pagination";
+import FrontEndPagination from "./components/Pagination/FrontEndPagination";
 
 function App() {
   const [selectedLang, setSelectedLang] = useState("en");
@@ -32,6 +34,12 @@ function App() {
           </a>
           <a className="ml-6" href="/slider">
             Slider
+          </a>
+          <a className="ml-6" href="/pagination">
+            Pagination
+          </a>
+          <a className="ml-6" href="/frontendPaginate">
+            Front Paginate
           </a>
 
           <select
@@ -61,6 +69,11 @@ function App() {
           <Route path="/accordian" element={<Accordian />}></Route>
           <Route path="/comments" element={<Comments />}></Route>
           <Route path="slider" element={<ImageSlider />}></Route>
+          <Route path="/pagination" element={<Pagination />}></Route>
+          <Route
+            path="/frontendPaginate"
+            element={<FrontEndPagination />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </div>
