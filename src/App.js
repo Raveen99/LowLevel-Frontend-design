@@ -11,17 +11,18 @@ import Comments from "./components/NestedComments/Comments";
 import ImageSlider from "./components/ImageSlider/ImageSlider";
 import Pagination from "./components/Pagination/Pagination";
 import FrontEndPagination from "./components/Pagination/FrontEndPagination";
+import Autocomplete from "./components/AutoComplete.js/Autocomplete";
 
 function App() {
   const [selectedLang, setSelectedLang] = useState("en");
 
   return (
     <div>
-      <header className="bg-black text-white items-center p-4 h-16 flex">
-        <div className="w-2/4 ml-8 text-xl">
+      <header className="bg-black text-white items-center p-4 h-16 flex justify-between">
+        <div className=" ml-8 text-xl">
           <a href="/"> Hello </a>{" "}
         </div>
-        <div>
+        <div className="mr-8">
           <a href="/about">About</a>
           <a className="ml-6" href="/login">
             Login
@@ -40,6 +41,9 @@ function App() {
           </a>
           <a className="ml-6" href="/frontendPaginate">
             Front Paginate
+          </a>
+          <a className="ml-6" href="/autocomplete">
+            Auto Complete
           </a>
 
           <select
@@ -74,6 +78,7 @@ function App() {
             path="/frontendPaginate"
             element={<FrontEndPagination />}
           ></Route>
+          <Route path="/autocomplete" element={<Autocomplete />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

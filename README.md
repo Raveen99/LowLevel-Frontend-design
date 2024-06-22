@@ -68,3 +68,8 @@
 - 1. Doesn't keep track of pages
 - 2. If you want to sort data that can't be done in cursor pagination
 - 3. Little trickier to implement than offset pagination.
+
+## AutoComplete Search Bar
+
+- Here we implemented functionality similar to google search where we enter something in search bar and suggestion comes.
+- We have also implemented concept of debouncing and caching which helps in performance optimization
