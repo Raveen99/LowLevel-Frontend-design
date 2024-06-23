@@ -90,4 +90,4 @@
 
 - 2. No we don't need to show all the messages. Beacuse the organiser or other users will not be able to read the comments. So it is okay if we fetch comments after some delay using API polling.
 
-- 3. Yes it will freeze the page bcoz every second a large no of <div> tags are getting rendered. So, to solve this problem we will limit our chat window approx to 100 comments. So, as soon as 101th comment comes in the first comment will be removed from DOM. Only last 100 comments will be visible to users. It is very important to handle this case otherwise it could be major performance issue.
+- 3. Yes it will freeze the page bcoz every second a large no of <div> tags are getting rendered. So, to solve this problem we will limit our chat window approx to 100 comments. So, as soon as 101th comment comes in the first comment will be removed from DOM. Only last 100 comments will be visible to users. It is very important to handle this case otherwise it could be major performance issues.
