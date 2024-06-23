@@ -6,7 +6,7 @@ const Autocomplete = () => {
   const [searchText, setSearchText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isResultVisible, setIsResultVisible] = useState(false);
-  const [cache, setCache] = useState({});
+  const [cache] = useState({});
   const [error, setError] = useState(false);
 
   const customError =
@@ -17,6 +17,7 @@ const Autocomplete = () => {
     }, 300);
 
     return () => clearTimeout(timeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchText]);
 
   const fetchResults = async () => {
