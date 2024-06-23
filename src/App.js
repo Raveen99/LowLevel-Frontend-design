@@ -11,14 +11,15 @@ import Comments from "./components/NestedComments/Comments";
 import ImageSlider from "./components/ImageSlider/ImageSlider";
 import Pagination from "./components/Pagination/Pagination";
 import FrontEndPagination from "./components/Pagination/FrontEndPagination";
-import Autocomplete from "./components/AutoComplete.js/Autocomplete";
+import Autocomplete from "./components/AutoComplete/Autocomplete";
+import Livechat from "./components/LiveChat/Livechat";
 
 function App() {
   const [selectedLang, setSelectedLang] = useState("en");
 
   return (
     <div>
-      <header className="bg-black text-white items-center p-4 h-16 flex justify-between">
+      <header className="bg-black text-white items-center p-4 h-16 flex justify-between fixed w-full">
         <div className=" ml-8 text-xl">
           <a href="/"> Hello </a>{" "}
         </div>
@@ -46,6 +47,10 @@ function App() {
             Auto Complete
           </a>
 
+          <a className="ml-6" href="/livechat">
+            Live Chat
+          </a>
+
           <select
             className="ml-6 text-black h-6 w-24"
             value={selectedLang}
@@ -59,28 +64,32 @@ function App() {
           </select>
         </div>
       </header>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Body />}></Route>
-          <Route element={<ProtectedRoute />}>
-            <Route
-              path="/about"
-              element={<About lang={selectedLang} />}
-            ></Route>
-          </Route>
 
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/accordian" element={<Accordian />}></Route>
-          <Route path="/comments" element={<Comments />}></Route>
-          <Route path="slider" element={<ImageSlider />}></Route>
-          <Route path="/pagination" element={<Pagination />}></Route>
-          <Route
-            path="/frontendPaginate"
-            element={<FrontEndPagination />}
-          ></Route>
-          <Route path="/autocomplete" element={<Autocomplete />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <div className="pt-16">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Body />}></Route>
+            <Route element={<ProtectedRoute />}>
+              <Route
+                path="/about"
+                element={<About lang={selectedLang} />}
+              ></Route>
+            </Route>
+
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/accordian" element={<Accordian />}></Route>
+            <Route path="/comments" element={<Comments />}></Route>
+            <Route path="slider" element={<ImageSlider />}></Route>
+            <Route path="/pagination" element={<Pagination />}></Route>
+            <Route
+              path="/frontendPaginate"
+              element={<FrontEndPagination />}
+            ></Route>
+            <Route path="/autocomplete" element={<Autocomplete />}></Route>
+            <Route path="/livechat" element={<Livechat />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }

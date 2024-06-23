@@ -73,3 +73,21 @@
 
 - Here we implemented functionality similar to google search where we enter something in search bar and suggestion comes.
 - We have also implemented concept of debouncing and caching which helps in performance optimization
+
+## Real Time Chat application (Youtube live stream)
+
+- First we will discuss the challenges which we have to take care while building this.
+
+- 1. Is this live chat real time or not?
+
+- 2. Suppose there is live stream where there are lacks or crores of users and let say 10,000 of them are messaging at same time. Do we need to show all the message?
+
+- 3. Now suppose a live stream lasted 5 hours or more and somebody is still there from starting. Just think of no of questions which are being rendered on UI for that person. Will it nor freeze the system.
+
+- Answer to above questions are:
+
+- 1. No, the chat is not real time. Suppose we have large users on that live stream and around 1000's of them are commenting in a sec. It is possible for organiser or any other to read all those comments and how much load system have to take to update all comments continuously. So, we can put limit (50 msg per second) to no. of message we will shown on UI. This can be done in frontend and at backend but it will be more feasible to do it in backend because we will avoid overfetching of data if we implement this limit in backend.
+
+- 2. No we don't need to show all the messages. Beacuse the organiser or other users will not be able to read the comments. So it is okay if we fetch comments after some delay using API polling.
+
+- 3. Yes it will freeze the page bcoz every second a large no of <div> tags are getting rendered. So, to solve this problem we will limit our chat window approx to 100 comments. So, as soon as 101th comment comes in the first comment will be removed from DOM. Only last 100 comments will be visible to users. It is very important to handle this case otherwise it could be major performance issue.
