@@ -40,9 +40,7 @@ function App() {
           <a className="ml-6" href="/pagination">
             Pagination
           </a>
-          <a className="ml-6" href="/frontendPaginate">
-            Front Paginate
-          </a>
+
           <a className="ml-6" href="/autocomplete">
             Auto Complete
           </a>
